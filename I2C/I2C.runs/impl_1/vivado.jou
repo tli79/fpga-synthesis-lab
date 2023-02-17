@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Dec  5 17:43:39 2022
+# Process ID: 12212
+# Current directory: D:/Fall 2022/FPGA/I2C/I2C.runs/impl_1
+# Command line: vivado.exe -log lab08.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lab08.tcl -notrace
+# Log file: D:/Fall 2022/FPGA/I2C/I2C.runs/impl_1/lab08.vdi
+# Journal file: D:/Fall 2022/FPGA/I2C/I2C.runs/impl_1\vivado.jou
+# Running On: LAPTOP-5IT6307N, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16832 MB
+#-----------------------------------------------------------
+source lab08.tcl -notrace

@@ -1,0 +1,300 @@
+
+*** Running vivado
+    with args -log lab08.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab08.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source lab08.tcl -notrace
+Command: synth_design -top lab08 -part xc7s25csga225-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25csga225-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18144
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1666.598 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'lab08' [D:/Fall 2022/FPGA/I2C/lab08.vhd:23]
+INFO: [Synth 8-3491] module 'lab08_gui' declared at 'D:/Fall 2022/FPGA/I2C/lab08_gui.vhd:5' bound to instance 'gui' of component 'lab08_gui' [D:/Fall 2022/FPGA/I2C/lab08.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'lab08_gui' [D:/Fall 2022/FPGA/I2C/lab08_gui.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'lab08_gui' (0#1) [D:/Fall 2022/FPGA/I2C/lab08_gui.vhd:16]
+INFO: [Synth 8-113] binding component instance 'scl_pin' to cell 'IOBUF' [D:/Fall 2022/FPGA/I2C/lab08.vhd:59]
+INFO: [Synth 8-113] binding component instance 'sda_pin' to cell 'IOBUF' [D:/Fall 2022/FPGA/I2C/lab08.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'lab08' (0#1) [D:/Fall 2022/FPGA/I2C/lab08.vhd:23]
+WARNING: [Synth 8-3917] design lab08 has port srx driven by constant 1
+WARNING: [Synth 8-3917] design lab08 has port nss driven by constant 1
+WARNING: [Synth 8-3917] design lab08 has port sck driven by constant 0
+WARNING: [Synth 8-3917] design lab08 has port sdi driven by constant 0
+WARNING: [Synth 8-7129] Port stx in module lab08 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdo in module lab08 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1666.598 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1666.598 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1666.598 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1666.598 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Fall 2022/FPGA/I2C/lab08.xdc]
+Finished Parsing XDC File [D:/Fall 2022/FPGA/I2C/lab08.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Fall 2022/FPGA/I2C/lab08.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab08_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lab08_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1690.352 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1690.352 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25csga225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lab08'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                iSTATE24 |                           000000 |                         00000000
+                iSTATE23 |                           000001 |                         00000001
+                iSTATE22 |                           000010 |                         00000010
+                iSTATE21 |                           000011 |                         00000011
+                iSTATE11 |                           000100 |                         00000100
+                 iSTATE8 |                           000101 |                         00000101
+                 iSTATE5 |                           000110 |                         00000110
+                 iSTATE3 |                           000111 |                         00000111
+                 iSTATE9 |                           001000 |                         00001000
+                 iSTATE7 |                           001001 |                         00001001
+                 iSTATE4 |                           001010 |                         00010000
+                 iSTATE2 |                           001011 |                         00010001
+                 iSTATE1 |                           001100 |                         00010010
+                 iSTATE0 |                           001101 |                         00010011
+                iSTATE33 |                           001110 |                         00010100
+                iSTATE30 |                           001111 |                         00010101
+                iSTATE28 |                           010000 |                         00010110
+                iSTATE26 |                           010001 |                         00010111
+                iSTATE31 |                           010010 |                         00011000
+                iSTATE29 |                           010011 |                         00011001
+                iSTATE34 |                           010100 |                         00100000
+                iSTATE32 |                           010101 |                         00100001
+                iSTATE27 |                           010110 |                         00100010
+                iSTATE25 |                           010111 |                         00100011
+                iSTATE20 |                           011000 |                         00100100
+                iSTATE18 |                           011001 |                         00100101
+                iSTATE16 |                           011010 |                         00100110
+                iSTATE15 |                           011011 |                         00100111
+                iSTATE19 |                           011100 |                         00101000
+                iSTATE17 |                           011101 |                         00101001
+                iSTATE14 |                           011110 |                         00110000
+                iSTATE13 |                           011111 |                         00110001
+                iSTATE12 |                           100000 |                         00110010
+                iSTATE10 |                           100001 |                         00110011
+                  iSTATE |                           100010 |                         00110100
+                iSTATE35 |                           100011 |                         00110101
+                 iSTATE6 |                           100100 |                         10011001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'lab08'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	  36 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 1     
+	   3 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 9     
+	  36 Input    6 Bit        Muxes := 2     
+	  36 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 23    
+	  10 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 1     
+	  36 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design lab08 has port srx driven by constant 1
+WARNING: [Synth 8-3917] design lab08 has port nss driven by constant 1
+WARNING: [Synth 8-3917] design lab08 has port sck driven by constant 0
+WARNING: [Synth 8-3917] design lab08 has port sdi driven by constant 0
+WARNING: [Synth 8-7129] Port stx in module lab08 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdo in module lab08 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT2  |    10|
+|3     |LUT3  |    11|
+|4     |LUT4  |    18|
+|5     |LUT5  |    24|
+|6     |LUT6  |    85|
+|7     |MUXF7 |     9|
+|8     |FDRE  |    79|
+|9     |FDSE  |     4|
+|10    |IBUF  |     2|
+|11    |IOBUF |     2|
+|12    |OBUF  |     5|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1690.352 ; gain = 23.754
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1690.352 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1690.352 ; gain = 23.754
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1690.352 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1693.797 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Synth Design complete, checksum: 1c193162
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1693.797 ; gain = 27.199
+INFO: [Common 17-1381] The checkpoint 'D:/Fall 2022/FPGA/I2C/I2C.runs/synth_1/lab08.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file lab08_utilization_synth.rpt -pb lab08_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  5 17:43:32 2022...
