@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Nov 29 18:06:38 2022
+# Process ID: 3432
+# Current directory: D:/Fall 2022/FPGA/SPI/SPI.runs/synth_1
+# Command line: vivado.exe -log lab07.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab07.tcl
+# Log file: D:/Fall 2022/FPGA/SPI/SPI.runs/synth_1/lab07.vds
+# Journal file: D:/Fall 2022/FPGA/SPI/SPI.runs/synth_1\vivado.jou
+# Running On: LAPTOP-5IT6307N, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16832 MB
+#-----------------------------------------------------------
+source lab07.tcl -notrace
